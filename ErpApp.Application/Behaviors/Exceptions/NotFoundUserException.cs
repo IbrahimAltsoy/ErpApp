@@ -1,0 +1,17 @@
+﻿namespace ErpApp.Application.Behaviors.Exceptions
+{
+    public class NotFoundUserException : Exception
+    {
+        public NotFoundUserException() : base("Kullanıcı adı veya şifre hatalı girdiniz.")
+        {
+        }
+
+        public NotFoundUserException(string? message) : base(message)
+        {
+        }
+
+        public NotFoundUserException(string? message, Exception? innerException) : base(message, innerException)
+        {
+        }
+    }
+}
