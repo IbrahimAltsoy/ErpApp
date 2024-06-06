@@ -17,7 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.Infrastructure", "Er
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApp.Persistance", "ErpApp.Persistance\ErpApp.Persistance.csproj", "{FE49C1E8-BAF4-40DA-8712-68EA0CCC0554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpApi", "ErpApi\ErpApi.csproj", "{51E3FF13-601A-4D83-BC5A-EF58E1C92768}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErpApi", "ErpApi\ErpApi.csproj", "{51E3FF13-601A-4D83-BC5A-EF58E1C92768}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E632CA2B-6249-4FA8-8941-DC3B6FF29DE2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

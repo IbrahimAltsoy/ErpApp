@@ -1,6 +1,8 @@
 using ErpApp.Application;
 using ErpApp.Infrastructure;
+using ErpApp.Infrastructure.Hubs;
 using ErpApp.Persistance;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,5 +29,14 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapHubs();
 app.Run();
+
+
+public static class HubMapsRegistration
+{
+    public static void MapHubs(this WebApplication webApplication)
+    {        
+        webApplication.MapHub<CretateUserHub>("/createUser-hub");
+    }
+}

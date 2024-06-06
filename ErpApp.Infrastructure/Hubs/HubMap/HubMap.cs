@@ -1,0 +1,12 @@
+﻿using Microsoft.AspNetCore.Builder;
+namespace ErpApp.Infrastructure.Hubs.HubMap
+{
+    public static class HubMap
+    {
+        //public static void MapHubs()
+        //{
+        //   // webApplication.MapHub<CretateUserHub>("/createUser-hub");
+            
+        //}
+    }
+}
