@@ -2,7 +2,7 @@
 
 namespace ErpApp.Infrastructure.Hubs
 {
-    public class CretateUserHub:Hub
+    public class LoginUserHub:Hub
     {
     }
 }

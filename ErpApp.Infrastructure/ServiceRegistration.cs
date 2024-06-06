@@ -2,6 +2,7 @@
 using ErpApp.Application.Services.HubService;
 using ErpApp.Infrastructure.Services;
 using ErpApp.Infrastructure.Services.Hubs;
+using ErpApp.Infrastructure.Services.HubService;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace ErpApp.Infrastructure
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<ICreateUserHubService, CreateUserHubService>();
+            services.AddScoped<ILoginUserHubService, LoginUserHubService>();
 
             services.AddSignalR();
 

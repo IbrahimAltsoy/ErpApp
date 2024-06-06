@@ -5,14 +5,14 @@ using ErpApp.Infrastructure.Hubs;
 using ErpApp.Infrastructure.Hubs.FunctionName;
 using Microsoft.AspNetCore.SignalR;
 
-namespace ErpApp.Infrastructure.Services.Hubs
+namespace ErpApp.Infrastructure.Services.HubService
 {
-    public class CreateUserHubService : ICreateUserHubService
+    public class LoginUserHubService : ILoginUserHubService
     {
-        readonly IHubContext<CretateUserHub> _hubContext;
+        readonly IHubContext<LoginUserHub> _hubContext;
         readonly INotificationWriteRepository _notificationRepository;
 
-        public CreateUserHubService(IHubContext<CretateUserHub> hubContext, INotificationWriteRepository notificationRepository)
+        public LoginUserHubService(IHubContext<LoginUserHub> hubContext, INotificationWriteRepository notificationRepository)
         {
             _hubContext = hubContext;
             _notificationRepository = notificationRepository;
@@ -20,14 +20,13 @@ namespace ErpApp.Infrastructure.Services.Hubs
 
         public async Task SendMessage(string message)
         {
-            await _hubContext.Clients.All.SendAsync(ReceiveFunctionNames.CreateUserMessage, message);
+            await _hubContext.Clients.All.SendAsync(ReceiveFunctionNames.LoginUserMessage, message);
             Notification notification = new Notification
             {
                 Message = message,
             };
             await _notificationRepository.AddAsync(notification);
             await _notificationRepository.SaveChanges();
-
         }
     }
 }

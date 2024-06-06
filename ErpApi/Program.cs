@@ -32,11 +32,12 @@ app.MapControllers();
 app.MapHubs();
 app.Run();
 
-
+// burayý sor ben bunu Infrastructure üzerinde yapmak istiyorum
 public static class HubMapsRegistration
 {
     public static void MapHubs(this WebApplication webApplication)
     {        
         webApplication.MapHub<CretateUserHub>("/createUser-hub");
+        webApplication.MapHub<LoginUserHub>("/loginUser-hub");
     }
 }

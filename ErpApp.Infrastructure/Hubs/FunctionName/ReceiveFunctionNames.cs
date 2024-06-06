@@ -9,5 +9,6 @@ namespace ErpApp.Infrastructure.Hubs.FunctionName
     public static class ReceiveFunctionNames
     {
         public const string CreateUserMessage = "receiveCreateUserMessage";
+        public const string LoginUserMessage = "receiveLoginUserMessage";
     }
 }
