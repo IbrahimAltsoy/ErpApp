@@ -18,9 +18,9 @@ namespace ErpApp.Infrastructure.Services.Hubs
             _notificationRepository = notificationRepository;
         }
 
+
         public async Task SendMessage(string message)
-        {
-            await _hubContext.Clients.All.SendAsync(ReceiveFunctionNames.CreateUserMessage, message);
+        {            
             Notification notification = new Notification
             {
                 Message = message,
