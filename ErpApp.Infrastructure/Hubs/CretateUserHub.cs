@@ -20,5 +20,9 @@ namespace ErpApp.Infrastructure.Hubs
             await Clients.All.SendAsync(ReceiveFunctionNames.CreateUserMessage, "Eklendi dfdgfh");
              await base.OnConnectedAsync();
         }
+        public async Task SendNotification()
+        {
+            await Clients.All.SendAsync("SendNotification", "Umut yazayım dfdgfh");
+        }
     }
 }
